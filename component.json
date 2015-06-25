@@ -2,11 +2,11 @@
   "name": "analytics.js-integration-facebook-custom-audiences",
   "repo": "segment-integrations/analytics.js-integration-facebook-custom-audiences",
   "description": "The Facebook Custom Audiences analytics.js integration.",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "license": "LicenseRef-LICENSE",
   "main": "lib/index.js",
   "dependencies": {
-    "segmentio/analytics.js-integration": "0.3.x",
+    "segmentio/analytics.js-integration": "^1.0.0",
     "segmentio/global-queue": "0.0.2",
     "ianstormtaylor/reduce": "master"
   },
