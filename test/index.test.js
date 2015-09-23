@@ -107,18 +107,44 @@ describe('Facebook Custom Audiences', function() {
       });
 
       it('should send ecommerce event - Viewed Product', function() {
-        analytics.track('Viewed Product', { id: '507f1f77bcf86cd799439011' });
+        analytics.track('Viewed Product', {
+          id: '507f1f77bcf86cd799439011',
+          currency: 'USD',
+          value: 0.50,
+          quantity: 1,
+          price: 24.75,
+          name: 'my product',
+          category: 'cat 1',
+          sku: 'p-298'
+        });
         analytics.called(window._fbq.push, ['track', 'ViewContent', {
           content_ids: ['507f1f77bcf86cd799439011'],
-          content_type: 'product'
+          content_type: 'product',
+          content_name: 'my product',
+          content_category: 'cat 1',
+          currency: 'USD',
+          value: 0.50
         }]);
       });
 
       it('should send ecommerce event - Adding to Cart', function() {
-        analytics.track('Added Product', { id: '507f1f77bcf86cd799439011' });
+        analytics.track('Added Product', {
+          id: '507f1f77bcf86cd799439011',
+          currency: 'USD',
+          value: 0.50,
+          quantity: 1,
+          price: 24.75,
+          name: 'my product',
+          category: 'cat 1',
+          sku: 'p-298'
+        });
         analytics.called(window._fbq.push, ['track', 'AddToCart', {
           content_ids: ['507f1f77bcf86cd799439011'],
-          content_type: 'product'
+          content_type: 'product',
+          content_name: 'my product',
+          content_category: 'cat 1',
+          currency: 'USD',
+          value: 0.50
         }]);
       });
 
@@ -127,11 +153,15 @@ describe('Facebook Custom Audiences', function() {
           products: [
             { id: '507f1f77bcf86cd799439011' },
             { id: '505bd76785ebb509fc183733' }
-          ]
+          ],
+          currency: 'USD',
+          value: 0.50
         });
         analytics.called(window._fbq.push, ['track', 'Purchase', {
           content_ids: ['507f1f77bcf86cd799439011', '505bd76785ebb509fc183733'],
-          content_type: 'product'
+          content_type: 'product',
+          currency: 'USD',
+          value: 0.50
         }]);
       });
     });
