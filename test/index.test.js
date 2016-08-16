@@ -99,16 +99,16 @@ describe('Facebook Custom Audiences', function() {
         }]);
       });
 
-      it('should send ecommerce event - Viewed Product Category', function() {
-        analytics.track('Viewed Product Category', { category: 'Games' });
+      it('should send ecommerce event - Product List Viewed', function() {
+        analytics.track('Product List Viewed', { category: 'Games' });
         analytics.called(window._fbq.push, ['track', 'ViewContent', {
           content_ids: ['Games'],
           content_type: 'product_group'
         }]);
       });
 
-      it('should send ecommerce event - Viewed Product', function() {
-        analytics.track('Viewed Product', {
+      it('should send ecommerce event - Product Viewed', function() {
+        analytics.track('Product Viewed', {
           id: '507f1f77bcf86cd799439011',
           currency: 'USD',
           value: 0.50,
@@ -129,7 +129,7 @@ describe('Facebook Custom Audiences', function() {
       });
 
       it('should send ecommerce event - Adding to Cart', function() {
-        analytics.track('Added Product', {
+        analytics.track('Product Added', {
           id: '507f1f77bcf86cd799439011',
           currency: 'USD',
           value: 0.50,
@@ -150,7 +150,7 @@ describe('Facebook Custom Audiences', function() {
       });
 
       it('should send ecommerce event - Completing an Order', function() {
-        analytics.track('Completed Order', {
+        analytics.track('Order Completed', {
           products: [
             { id: '507f1f77bcf86cd799439011' },
             { id: '505bd76785ebb509fc183733' }
