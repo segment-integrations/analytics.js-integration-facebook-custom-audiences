@@ -25,7 +25,8 @@
   "dependencies": {
     "@ndhoule/foldl": "^2.0.1",
     "@segment/analytics.js-integration": "^3.1.0",
-    "global-queue": "^1.0.1"
+    "global-queue": "^1.0.1",
+    "segmentio-facade": "^3.1.0"
   },
   "devDependencies": {
     "@segment/analytics.js-core": "^3.0.0",
