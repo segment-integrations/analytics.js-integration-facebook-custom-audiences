@@ -109,7 +109,7 @@ describe('Facebook Custom Audiences', function() {
 
       it('should send ecommerce event - Product Viewed', function() {
         analytics.track('Product Viewed', {
-          id: '507f1f77bcf86cd799439011',
+          product_id: '507f1f77bcf86cd799439011',
           currency: 'USD',
           value: 0.50,
           quantity: 1,
@@ -130,7 +130,7 @@ describe('Facebook Custom Audiences', function() {
 
       it('should send ecommerce event - Adding to Cart', function() {
         analytics.track('Product Added', {
-          id: '507f1f77bcf86cd799439011',
+          product_id: '507f1f77bcf86cd799439011',
           currency: 'USD',
           value: 0.50,
           quantity: 1,
@@ -152,8 +152,8 @@ describe('Facebook Custom Audiences', function() {
       it('should send ecommerce event - Completing an Order', function() {
         analytics.track('Order Completed', {
           products: [
-            { id: '507f1f77bcf86cd799439011' },
-            { id: '505bd76785ebb509fc183733' }
+            { product_id: '507f1f77bcf86cd799439011' },
+            { product_id: '505bd76785ebb509fc183733' }
           ],
           currency: 'USD',
           value: 0.50
